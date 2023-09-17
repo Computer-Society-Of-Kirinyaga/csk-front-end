@@ -1,6 +1,7 @@
 import "./App.css";
-import { Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./Pages/HomePage/HomePage";
 
 const useStyles = makeStyles((theme) => ({
   color_test: {
@@ -12,9 +13,11 @@ function App() {
   const classes = useStyles();
   return (
     <>
-      <Typography variant="h1" className={classes.color_test}>
-        Welcome to the csk app
-      </Typography>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
