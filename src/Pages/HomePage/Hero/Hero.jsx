@@ -16,7 +16,7 @@ const Hero = () => {
       justifyContent="space-between"
     >
       <Grid item xl={7} lg={7} md={12} xs={12} component="div">
-        <Typography>Welcome to CSK</Typography>
+        <Typography className={classes.subtitle}>Welcome to CSK</Typography>
         <Typography variant="h1" className={classes.mainTitle}>
           We create products and solve existing societal problems
         </Typography>

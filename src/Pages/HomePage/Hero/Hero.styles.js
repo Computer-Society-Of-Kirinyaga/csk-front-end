@@ -14,6 +14,23 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(10),
     marginTop: theme.spacing(1),
   },
+  subtitle: {
+    color: theme.palette.primary.main,
+    fontWeight: theme.typography.fontWeightMedium,
+    position: "relative",
+    width: "max-content",
+    transform: "translateX(1.5rem)",
+    "&::after": {
+      content: "''",
+      width: "1.2rem",
+      height: "3px",
+      position: "absolute",
+      top: "50%",
+      left: "0",
+      transform: "translate(-110%, -50%)",
+      backgroundColor: "currentcolor",
+    },
+  },
   linkScroll: {
     minWidth: LINK_SCROLL_SIDE,
     minHeight: LINK_SCROLL_SIDE,
