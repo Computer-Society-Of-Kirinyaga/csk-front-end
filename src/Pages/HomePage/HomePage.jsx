@@ -1,10 +1,11 @@
 import PublicAppBar from "../../Components/AppBars/PublicAppBar";
+import Hero from "./Hero/Hero";
 const HomePage = () => {
-    return(
-        <>
-        <PublicAppBar />
-        <h1>Computer Society of Kirinyaga</h1>
-        </>
-    )
-}
+  return (
+    <>
+      <PublicAppBar />
+      <Hero />
+    </>
+  );
+};
 export default HomePage;
