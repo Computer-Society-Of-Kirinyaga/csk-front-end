@@ -1,22 +1,25 @@
 import React from "react";
-import { Box, Stack } from "@mui/material";
-
-import ImageLogo from "../Components/SignUpComponent/ImageLogo";
-import SignupForm from "../Components/SignUpComponent/SignupForm";
+import { Box, Container, Grid } from "@mui/material";
+import ImageLogo from "../Components/SignUp/ImageLogo";
+import SignupForm from "../Components/SignUp/SignupForm";
+import PublicAppBar from "./../Components/AppBars/PublicAppBar";
 
 const SignupPage = () => {
   return (
-    <Box
-      display="flex"
-      justifyContent="space-around"
-      minHeight="100vh"
-      border="1px solid green"
-    >
-      <Stack direction="row" spacing="8" display="flex" alignItems="center">
-        <ImageLogo />
-        <SignupForm />
-      </Stack>
-    </Box>
+    <div>
+      <Container sx={{ paddingTop: "1rem" }}>
+        <PublicAppBar />
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6}>
+            <ImageLogo />
+          </Grid>
+
+          <Grid item xs={12} sm={6}>
+            <SignupForm />
+          </Grid>
+        </Grid>
+      </Container>
+    </div>
   );
 };
 

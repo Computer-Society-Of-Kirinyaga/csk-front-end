@@ -17,9 +17,7 @@ a {
 
 body {
   margin: 0;
-  display: flex;
   padding-top: 3.5rem;
-
 }
 
 @media (prefers-color-scheme: light) {

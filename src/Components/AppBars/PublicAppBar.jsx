@@ -22,6 +22,7 @@ const PublicAppBar = () => {
     { label: "gallery", to: "/" },
     { label: "blog", to: "/" },
     { label: "contact us", to: "/" },
+    { label:  "sign-up", to: "/signup"}
   ];
   return (
     <AppBar elevation={1}>

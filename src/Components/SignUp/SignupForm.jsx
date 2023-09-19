@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import CustomInput from "./CustomInput";
 import { Typography, Button, Paper, Box } from "@mui/material";
+import { useTheme } from "@mui/styles";
+import useStyles from "./FormStyles";
 
 function SignupForm() {
+  const classes = useStyles();
+  const theme = useTheme();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -26,11 +30,19 @@ function SignupForm() {
   };
 
   return (
-    <Box flex={2}>
-      <Typography variant="h4" align="center" gutterBottom>
+    <Box>
+      <Typography
+        variant="h4"
+        gutterBottom
+        className={classes.registerTitle}
+      >
         Register
       </Typography>
-      <Paper elevation={3} square={false} sx={{ padding: "20px" }}>
+      <Paper
+        elevation={3}
+        square={false}
+        className={classes.paper}
+      >
         <form onSubmit={handleSubmit}>
           <CustomInput
             label="First Name"
@@ -118,9 +130,7 @@ function SignupForm() {
           <Button
             type="submit"
             variant="contained"
-            color="primary"
-            fullWidth
-            style={{ marginTop: "1rem" }}
+            className={classes.submitBTN}
           >
             Sign Up
           </Button>

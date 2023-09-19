@@ -1,25 +1,16 @@
 import React from "react";
 import SignupLogo from "../../assets/images/SignupLogo.png";
 import { Box } from "@mui/material";
+import useStyles from "./FormStyles";
 
 function Image() {
+  const classes = useStyles();
   return (
     <Box
-      flex={2}
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      height="100%"
+      className={classes.ImageBox}
       sx={{ display: { xs: "none", sm: "flex" } }}
     >
-      <img
-        src={SignupLogo}
-        alt="logo"
-        style={{
-          width: "100%",
-          height: "auto",
-        }}
-      />
+      <img src={SignupLogo} alt="logo" className={classes.SignupLogo} />
     </Box>
   );
 }
