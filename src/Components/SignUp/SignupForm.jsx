@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import CustomInput from "./CustomInput";
 import techStackOptions from "./TechStackOptions";
+import { toast } from "react-toastify";
+import { toastStyles } from "../../toastConfig";
+import "react-toastify/dist/ReactToastify.css";
 import {
   Typography,
   Button,
@@ -71,9 +74,11 @@ function SignupForm() {
     Axios.post(`${apiDomain}/users`, formData)
       .then((response) => {
         console.log(response);
+        toast.success("Account created successfully");
       })
       .catch(({ response }) => {
         console.log(response);
+        toast.error(response.data.message, toastStyles.error);
       });
   };
 
