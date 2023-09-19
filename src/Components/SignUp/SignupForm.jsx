@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import CustomInput from "./CustomInput";
+import techStackOptions from "./TechStackOptions";
 import {
   Typography,
   Button,
   Paper,
   Box,
-  TextField,
   FormControl,
   InputLabel,
   Select,
@@ -13,6 +13,7 @@ import {
   FormGroup,
   FormControlLabel,
   Checkbox,
+  Grid,
 } from "@mui/material";
 import { useTheme } from "@mui/styles";
 import useStyles from "./FormStyles";
@@ -20,6 +21,7 @@ import Axios from "axios";
 import { apiDomain } from "../../utils/apiDomain";
 
 function SignupForm() {
+  const [passwordMatch, setPasswordMatch] = useState(true);
   const classes = useStyles();
   const theme = useTheme();
   const [formData, setFormData] = useState({
@@ -34,13 +36,38 @@ function SignupForm() {
     confirmPassword: "",
   });
 
+  const handleTechStackChange = (e) => {
+    const { value } = e.target;
+    if (formData.techStack.includes(value)) {
+      setFormData({
+        ...formData,
+        techStack: formData.techStack.filter((item) => item !== value),
+      });
+    } else {
+      setFormData({
+        ...formData,
+        techStack: [...formData.techStack, value],
+      });
+    }
+  };
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
+  // action on submit
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (formData.password !== formData.confirmPassword) {
+      setPasswordMatch(false);
+      return;
+    } else {
+      setPasswordMatch(true);
+    }
+
+    // post request to API
     Axios.post(`${apiDomain}/users`, formData)
       .then((response) => {
         console.log(response);
@@ -48,8 +75,6 @@ function SignupForm() {
       .catch(({ response }) => {
         console.log(response);
       });
-
-    // console.log(formData);
   };
 
   return (
@@ -97,10 +122,10 @@ function SignupForm() {
               value={formData.yearOfStudy}
               onChange={handleInputChange}
             >
-              <MenuItem value="1">1</MenuItem>
-              <MenuItem value="2">2</MenuItem>
-              <MenuItem value="3">3</MenuItem>
-              <MenuItem value="4">4</MenuItem>
+              <MenuItem value="1"> First </MenuItem>
+              <MenuItem value="2"> Second </MenuItem>
+              <MenuItem value="3">Third</MenuItem>
+              <MenuItem value="4">Fourth</MenuItem>
             </Select>
           </FormControl>
           <CustomInput
@@ -121,25 +146,25 @@ function SignupForm() {
           <Typography variant="subtitle1" gutterBottom>
             Preferred Stack
           </Typography>
+
           <FormGroup>
-            <FormControlLabel
-              name="techStack"
-              value="techStack"
-              control={<Checkbox defaultChecked />}
-              label="Cyber security"
-            />
-            <FormControlLabel
-              name="techStack"
-              value="techStack"
-              control={<Checkbox />}
-              label="Power Platform"
-            />
-            <FormControlLabel
-              name="techStack"
-              value="techStack"
-              control={<Checkbox />}
-              label="Web development"
-            />
+            <Grid container>
+              {techStackOptions.map((option) => (
+                <Grid item xs={12} md={6} key={option}>
+                  <FormControlLabel
+                    name="techStack"
+                    value={option}
+                    control={
+                      <Checkbox
+                        checked={formData.techStack.includes(option)}
+                        onChange={handleTechStackChange}
+                      />
+                    }
+                    label={option}
+                  />
+                </Grid>
+              ))}
+            </Grid>
           </FormGroup>
 
           <CustomInput
@@ -158,6 +183,11 @@ function SignupForm() {
             onChange={handleInputChange}
             required
           />
+          {!passwordMatch && (
+            <Typography variant="caption" color="error">
+              Passwords do not match.
+            </Typography>
+          )}
           <Button
             type="submit"
             variant="contained"

@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     display: { xs: "none", sm: "flex" },
   },
   SignupLogo: {
-    width: "100%",
+    maxWidth: "400px",
     height: "auto",
   },
   registerTitle: {
@@ -18,7 +18,6 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "bold",
     fontSize: "2rem",
     margin: "20px 0",
-    
   },
   paper: {
     padding: "20px",

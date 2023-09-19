@@ -10,11 +10,11 @@ const SignupPage = () => {
       <Container sx={{ paddingTop: "1rem" }}>
         <PublicAppBar />
         <Grid container spacing={2}>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={5}>
             <ImageLogo />
           </Grid>
 
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={7}>
             <SignupForm />
           </Grid>
         </Grid>
