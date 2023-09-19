@@ -3,8 +3,7 @@ import { makeStyles } from "@mui/styles";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./Pages/HomePage/HomePage";
 
-import SignupPage from "./Pages/SignupPage";
-
+import SignupPage from "./Pages/SignUP page/SignupPage";
 
 const useStyles = makeStyles((theme) => ({
   color_test: {
@@ -19,7 +18,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/signup" element={<SignupPage/>} />
+          <Route path="/signup" element={<SignupPage />} />
         </Routes>
       </BrowserRouter>
     </>
