@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CustomInput from "./CustomInput";
 import techStackOptions from "./TechStackOptions";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { toastStyles } from "../../toastConfig";
 import "react-toastify/dist/ReactToastify.css";
@@ -24,7 +25,7 @@ import Axios from "axios";
 import { apiDomain } from "../../utils/apiDomain";
 
 function SignupForm() {
-  const [passwordMatch, setPasswordMatch] = useState(true);
+  const navigate = useNavigate();
   const classes = useStyles();
   const theme = useTheme();
   const [formData, setFormData] = useState({
@@ -38,6 +39,7 @@ function SignupForm() {
     password: "",
     confirmPassword: "",
   });
+  const [passwordMatch, setPasswordMatch] = useState(true);
 
   const handleTechStackChange = (e) => {
     const { value } = e.target;
@@ -75,10 +77,12 @@ function SignupForm() {
       .then((response) => {
         console.log(response);
         toast.success("Account created successfully");
+        navigate("/login")
       })
       .catch(({ response }) => {
         console.log(response);
         toast.error(response.data.message, toastStyles.error);
+        toast.error(response.data.error, toastStyles.error);
       });
   };
 

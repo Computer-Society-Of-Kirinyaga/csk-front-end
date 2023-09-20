@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Grid } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 import ImageLogo from "../../Components/SignUp/ImageLogo";
 import SignupForm from "../../Components/SignUp/SignupForm";
 import PublicAppBar from "../../Components/AppBars/PublicAppBar";
