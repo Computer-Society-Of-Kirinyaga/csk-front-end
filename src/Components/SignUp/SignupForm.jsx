@@ -20,7 +20,7 @@ import {
   Grid,
 } from "@mui/material";
 import { useTheme } from "@mui/styles";
-import useStyles from "./FormStyles";
+import useStyles from "./AuthStyles";
 import Axios from "axios";
 import { apiDomain } from "../../utils/apiDomain";
 
@@ -77,7 +77,7 @@ function SignupForm() {
       .then((response) => {
         console.log(response);
         toast.success("Account created successfully");
-        navigate("/login")
+        navigate("/login");
       })
       .catch(({ response }) => {
         console.log(response);
@@ -204,6 +204,14 @@ function SignupForm() {
           >
             Sign Up
           </Button>
+          <Typography
+            variant="body2"
+            component="p"
+            gutterBottom
+            className={classes.HaveAccount}
+          >
+            Have an account? <a href="/login">Login</a>
+          </Typography>
         </form>
       </Paper>
     </Box>

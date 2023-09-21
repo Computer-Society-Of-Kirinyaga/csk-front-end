@@ -1,7 +1,7 @@
 import React from "react";
 import SignupLogo from "../../assets/images/SignupLogo.png";
 import { Box } from "@mui/material";
-import useStyles from "./FormStyles";
+import useStyles from "./AuthStyles";
 
 function Image() {
   const classes = useStyles();
