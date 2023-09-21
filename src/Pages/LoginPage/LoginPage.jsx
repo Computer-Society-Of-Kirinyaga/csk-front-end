@@ -2,7 +2,6 @@ import React from "react";
 import { Box, Container } from "@mui/material";
 import PublicAppBar from "./../../Components/AppBars/PublicAppBar";
 import { Grid } from "@mui/material";
-import SignupForm from "./../../Components/SignUp/SignupForm";
 import ImageLogo from "../../Components/Login/LoginLogo";
 import LoginForm from "../../Components/Login/LoginForm";
 

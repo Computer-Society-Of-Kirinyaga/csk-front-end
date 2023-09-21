@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import CustomInput from "../SignUp/CustomInput";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { toastStyles } from "../../toastConfig";
-import { Typography, Button, Paper, Box, Grid } from "@mui/material";
-import { useTheme } from "@mui/styles";
+import { Typography, Button, Paper, Box } from "@mui/material";
 import useStyles from "../SignUp/AuthStyles";
-import Axios from "axios";
+import { useDispatch } from "react-redux";
+import { loginUser } from "../../Redux/APICall";
 
 function LoginForm() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const classes = useStyles();
   const [formData, setFormData] = useState({
     userName: "",
@@ -19,9 +19,10 @@ function LoginForm() {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    await loginUser(dispatch, formData, () => navigate("/"));
+    // console.log(formData);
   };
   return (
     <Box>

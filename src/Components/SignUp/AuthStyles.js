@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
   SignupLogo: {
     maxWidth: "400px",
     height: "auto",
+  
   },
   LoginLogo: {
     maxWidth: "300px",
@@ -30,6 +31,10 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: "20px",
     margin: "20px",
+    [theme.breakpoints.down("sm")]: {
+      padding: "10px",
+      margin: "10px",
+    },
   },
   submitBTN: {
     display: "block",
@@ -39,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       backgroundColor: theme.palette.primary.light,
     },
-    // for smaller screens
+
     [theme.breakpoints.down("sm")]: {
       width: "100%",
     },
