@@ -9,7 +9,7 @@ const HomePage = () => {
       <PublicAppBar />
       <Hero />
       <UpcomingEvents />
-      {/* <Benefits /> */}
+      <Benefits />
       <JoinUs />
     </>
   );
