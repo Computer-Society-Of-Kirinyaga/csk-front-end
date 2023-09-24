@@ -2,13 +2,16 @@ import React from 'react';
 import { Container, Grid, Typography, IconButton, Box } from '@mui/material';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
-// import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 
 const Footer = () => {
+   const iconStyle = {
+    color: 'white',
+  };
+
   return (
     <footer style={{ backgroundColor: 'orange', color: '#fff' }}>
       <Container>
@@ -22,27 +25,27 @@ const Footer = () => {
             <Typography variant="h6" >Social Media</Typography>
               <IconButton color="inherit">
               <a href="">
-                <FacebookIcon />
+                <FacebookIcon style={iconStyle}/>
                 </a>
               </IconButton>
               <IconButton color="inherit">
               <a href="">
-                <TwitterIcon />
+                <TwitterIcon style={iconStyle} />
                 </a>
               </IconButton>
               <IconButton color="inherit">
               <a href="https://chat.whatsapp.com/HZHZ80YycmMLjDMqOoI42U">
-                <WhatsAppIcon />
+                <WhatsAppIcon style={iconStyle}/>
                 </a>
               </IconButton>
               <IconButton color="inherit">
               <a href="https://www.linkedin.com/in/kirinyaga-university/">
-                <LinkedInIcon />
+                <LinkedInIcon style={iconStyle}/>
                 </a>
               </IconButton>
               <IconButton color="inherit">
               <a href="https://github.com/Computer-Society-Of-Kirinyaga">
-                <GitHubIcon />
+                <GitHubIcon style={iconStyle}/>
                 </a>
 
               </IconButton>
@@ -58,17 +61,18 @@ const Footer = () => {
             <Typography variant="h6" align="center">
               Support
             </Typography>
-            <Typography variant="subtitle1" align="center"  padding={3} text-align="justify">
+            <Typography variant="subtitle1" align="left"  lineHeight={3} font-fontSize={10}>
+             
               
                 Email: cskirinyaga@kyu.ac.ke
                 <br />
-                WhatsApp: +25412345678
+                WhatsApp: +254791379440
                 <br />
-                Phone: 076543210
+                Phone: 0791379440
               
             </Typography>
             <Box align="right">
-            {/* paddingX ={9} paddingY={1}  */}
+            
               <Typography variant="subtitle1">Powered by CSK</Typography>
             </Box>
           </Grid>
