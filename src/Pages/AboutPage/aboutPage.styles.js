@@ -18,7 +18,7 @@ export default makeStyles((theme) => ({
         flexDirection: "row",
         alignItems: "center",
         marginTop: "2rem",
-        width: "85vw",
+        width: "80vw",
         gap: "10rem",
     },
     image: {

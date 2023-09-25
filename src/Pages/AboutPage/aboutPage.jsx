@@ -20,11 +20,11 @@ function aboutPage() {
                     About Us
                 </Typography>
 
-                <Grid className={classes.mission}>
+                <Grid item xs={12} sm={7} className={classes.mission}>
                     <Typography variant="h5" className={classes.left} >
                         Our Mission
                     </Typography>
-                    <Typography variant="body1" className={classes.right} >
+                    <Typography variant="body1" className={classes.right} gutterBottom >
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt earum omnis ipsam itaque ipsum corrupti quo, tempora voluptates eius natus error soluta ab! Pariatur aspernatur optio numquam et ratione quia quis! Vitae aut illo sed doloribus nam! Blanditiis, deleniti quia officia quas recusandae assumenda necessitatibus earum dicta incidunt repellendus laudantium facere itaque repudiandae natus, veritatis laborum molestiae porro ut magni dolorem dolores quibusdam minus consequuntur. Placeat quo laborum aut porro nam maiores alias, quam adipisci.
                     </Typography>
                 </Grid>
@@ -40,7 +40,7 @@ function aboutPage() {
                         <Typography variant="h5" className={classes.title} >
                             Our Vision
                         </Typography>
-                        <Typography variant="p" >
+                        <Typography variant="body1"  gutterBottom>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt earum omnis ipsam itaque ipsum corrupti quo, tempora voluptates eius natus error soluta ab! Pariatur aspernatur optio numquam et ratione quia quis! Vitae aut illo sed doloribus nam! Blanditiis, deleniti quia officia quas recusandae assumenda necessitatibus earum dicta incidunt repellendus laudantium facere itaque repudiandae natus, veritatis laborum molestiae porro ut magni dolorem dolores quibusdam minus consequuntur. Placeat quo laborum aut porro nam maiores alias, quam adipisci.
                         </Typography>
                     </Box>
@@ -49,11 +49,11 @@ function aboutPage() {
 
                 <Grid component="div" className={classes.objectivesDiv}>
                     <img src={ValuesImage} alt="" className={classes.cardImage} />
-                    <Box className={classes.cardBox}>
+                    <Box className={classes.cardBox} >
                         <Typography variant="h5" className={classes.title} >
                             Our Objectives
                         </Typography>
-                        <Typography variant="p" >
+                        <Typography variant="body1" gutterBottom >
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt earum omnis ipsam itaque ipsum corrupti quo, tempora voluptates eius natus error soluta ab! Pariatur aspernatur optio numquam et ratione quia quis! Vitae aut illo sed doloribus nam! Blanditiis, deleniti quia officia quas recusandae assumenda necessitatibus earum dicta incidunt repellendus laudantium facere itaque repudiandae natus, veritatis laborum molestiae porro ut magni dolorem dolores quibusdam minus consequuntur. Placeat quo laborum aut porro nam maiores alias, quam adipisci.
                         </Typography>
                     </Box>
