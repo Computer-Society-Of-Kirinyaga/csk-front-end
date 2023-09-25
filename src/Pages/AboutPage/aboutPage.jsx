@@ -20,7 +20,7 @@ function aboutPage() {
                     About Us
                 </Typography>
 
-                <Grid item xs={12} sm={7} className={classes.mission}>
+                <Grid className={classes.mission}>
                     <Typography variant="h5" className={classes.left} >
                         Our Mission
                     </Typography>

@@ -17,7 +17,7 @@ a {
 
 body {
   margin: 0;
-  display: flex;
+  /* display: flex; */
   padding-top: 3.5rem;
 }
 
