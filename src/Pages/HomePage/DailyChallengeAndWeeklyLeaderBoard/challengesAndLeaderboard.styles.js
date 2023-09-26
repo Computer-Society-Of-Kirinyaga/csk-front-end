@@ -7,6 +7,9 @@ const useStyles = makeStyles((theme) => ({
   },
   challengeBox: {
     marginTop: theme.spacing(3),
+    [theme.breakpoints.down("md")]: {
+      marginBottom: theme.spacing(4),
+    },
   },
   challengeText: {
     lineHeight: "1.5",

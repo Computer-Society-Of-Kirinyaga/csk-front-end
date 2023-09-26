@@ -10,12 +10,13 @@ const Benefits = () => {
         <Grid
           item
           container
+          direction="column"
           justifyContent="center"
           alignItems="center"
           xs={12}
           md={12}
           lg={6}
-          xl={12}
+          xl={6}
         >
           <Typography variant="h3" className={classes.benefitsTitle}>
             Advantages of joining us
@@ -45,7 +46,7 @@ const Benefits = () => {
           xs={12}
           md={12}
           lg={6}
-          xl={12}
+          xl={6}
         >
           <img
             src={benefitsImage}

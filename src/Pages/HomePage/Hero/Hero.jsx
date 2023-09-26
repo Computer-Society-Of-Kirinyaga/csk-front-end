@@ -15,16 +15,17 @@ const Hero = () => {
       alignItems="center"
       justifyContent="space-between"
     >
-      <Grid item xl={7} lg={7} md={12} xs={12} component="div">
+      <Grid item xl={8} lg={7} md={12} xs={12} component="section">
         <Typography className={classes.subtitle}>Welcome to CSK</Typography>
         <Typography variant="h1" className={classes.mainTitle}>
-          We create products and solve existing societal problems
+          Your Gateway to Tech Excellence: We Learn, We Create, We Collaborate,
+          We Innovate, Join Us on the Journey of Learning and Building
         </Typography>
         <Link className={classes.linkScroll}>
           <ArrowDownwardIcon fontSize="large" sx={{ color: "#fff" }} />
         </Link>
       </Grid>
-      <Grid item xl={5} lg={5} md={12} xs={12} component="div">
+      <Grid item xl={4} lg={5} md={12} xs={12} component="div">
         <img src={heroImage} className={classes.heroImage} />
       </Grid>
     </Grid>

@@ -45,6 +45,10 @@ const useStyles = makeStyles((theme) => ({
   heroImage: {
     width: "30rem",
     transform: "translateX(-8%)",
+    [theme.breakpoints.down("md")]: {
+      width: "20rem",
+      transform: "none",
+    },
   },
 }));
 
