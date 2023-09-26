@@ -58,7 +58,7 @@ const Footer = () => {
           </Grid>
 
           <Grid item xs={12} sm={6}>
-            <Typography variant="h6" align="center">
+            <Typography variant="h6" align="left">
               Support
             </Typography>
             <Typography variant="subtitle1" align="left"  lineHeight={3} font-fontSize={10}>
@@ -71,10 +71,7 @@ const Footer = () => {
                 Phone: 0791379440
               
             </Typography>
-            <Box align="right">
             
-              <Typography variant="subtitle1">Powered by CSK</Typography>
-            </Box>
           </Grid>
         </Grid>
       </Container>
