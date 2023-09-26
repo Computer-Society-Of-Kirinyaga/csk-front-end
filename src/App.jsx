@@ -1,7 +1,7 @@
 import "./App.css";
 import { Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import Footer from "./Components/Footer";
+import Footer from "./Components/Footer/Footer";
 
 const useStyles = makeStyles((theme) => ({
   color_test: {
