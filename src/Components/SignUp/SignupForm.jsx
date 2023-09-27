@@ -112,35 +112,41 @@ function SignupForm() {
         }}
       >
         <form onSubmit={handleSubmit}>
-          <CustomInput
-            label="Full Name"
-            name="fullName"
-            value={formData.fullName}
-            onChange={handleInputChange}
-            required
-          />
-          <CustomInput
-            label="Email Address"
-            name="email"
-            type="email"
-            value={formData.email}
-            onChange={handleInputChange}
-            required
-          />
-          <CustomInput
-            label="User Name"
-            name="userName"
-            value={formData.userName}
-            onChange={handleInputChange}
-            required
-          />
-          <CustomInput
-            label="Phone Number"
-            name="phoneNo"
-            value={formData.phoneNo}
-            onChange={handleInputChange}
-            required
-          />
+          <Box className={classes.inputParent}>
+            <Box className={classes.inputElm}>
+              <CustomInput
+                label="Full Name"
+                name="fullName"
+                value={formData.fullName}
+                onChange={handleInputChange}
+                required
+              />
+              <CustomInput
+                label="Email Address"
+                name="email"
+                type="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                required
+              />
+            </Box>
+            <Box className={classes.inputElm}>
+              <CustomInput
+                label="User Name"
+                name="userName"
+                value={formData.userName}
+                onChange={handleInputChange}
+                required
+              />
+              <CustomInput
+                label="Phone Number"
+                name="phoneNo"
+                value={formData.phoneNo}
+                onChange={handleInputChange}
+                required
+              />
+            </Box>
+          </Box>
 
           <FormControl fullWidth required margin="normal">
             <InputLabel htmlFor="yearOfStudy">Year</InputLabel>
@@ -156,6 +162,7 @@ function SignupForm() {
               <MenuItem value="4">Fourth</MenuItem>
             </Select>
           </FormControl>
+
           <CustomInput
             label="Course"
             name="course"
@@ -217,12 +224,17 @@ function SignupForm() {
             </Typography>
           )}
           <LoadingButton
+            sx={{
+              display: "flex",
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
+            className={classes.submitBTN}
             type="submit"
             variant="outlined"
             loadingPosition="start"
             loading={isLoading}
             startIcon={<HowToRegIcon />}
-            className={classes.submitBTN}
           >
             {buttonText}
           </LoadingButton>

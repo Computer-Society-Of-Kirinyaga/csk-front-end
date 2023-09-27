@@ -10,15 +10,12 @@ export const loginUser = async (dispatch, user, callback) => {
   try {
     const { data } = await Axios.post(`${apiDomain}/users/auth/login`, user);
     if (data.token) {
-      setIsLoading(false);
-      setButtonText("Login");
       dispatch(loginSuccess(data));
       toast.success("Login Successful", toastStyles.success);
       callback();
     }
   } catch (response) {
-    setIsLoading(false);
-    setButtonText("Login");
+   
     dispatch(loginFailure());
     toast.error(response.response.data.message, toastStyles.error);
   }

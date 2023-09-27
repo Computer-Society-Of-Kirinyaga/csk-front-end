@@ -1,5 +1,4 @@
 import { makeStyles } from "@mui/styles";
-
 const useStyles = makeStyles((theme) => ({
   ImageBox: {
     display: "flex",
@@ -10,11 +9,11 @@ const useStyles = makeStyles((theme) => ({
   },
 
   SignupLogo: {
-    maxWidth: "400px",
+    maxWidth: "450px",
     height: "auto",
   },
   LoginLogo: {
-    maxWidth: "300px",
+    maxWidth: "350px",
     height: "auto",
   },
   registerTitle: {
@@ -35,10 +34,24 @@ const useStyles = makeStyles((theme) => ({
       margin: "10px",
     },
   },
-  submitBTN: {
+  inputParent: {
     display: "flex",
-    marginLeft: "auto",
-    marginRight: "auto",
+    gap: "7px",
+
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    [theme.breakpoints.down("sm")]: {
+      display: "block",
+    },
+  },
+  inputElm: {
+    width: "50%",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
+  },
+
+  submitBTN: {
     color: "secondary",
     marginTop: theme.spacing(2),
     "&:hover": {

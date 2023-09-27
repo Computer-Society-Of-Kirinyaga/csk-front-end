@@ -4,7 +4,7 @@ import { LoadingButton } from "@mui/lab";
 import CustomInput from "../SignUp/CustomInput";
 import { useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
-import { Typography, Button, Paper, Box } from "@mui/material";
+import { Typography, Paper, Box } from "@mui/material";
 import useStyles from "../SignUp/AuthStyles";
 import { useDispatch } from "react-redux";
 import { loginUser } from "../../Redux/APICall";
@@ -31,6 +31,8 @@ function LoginForm() {
     setButtonText("Please Wait");
     await loginUser(dispatch, formData, () => navigate("/"));
     // console.log(formData);
+    setIsLoading(false);
+    setButtonText("Login");
   };
   return (
     <Box>
@@ -57,9 +59,12 @@ function LoginForm() {
               required
             />
 
-  
             <LoadingButton
-              style={{}}
+             sx={{
+              display: "flex",
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
               type="submit"
               variant="outlined"
               loadingPosition="start"
