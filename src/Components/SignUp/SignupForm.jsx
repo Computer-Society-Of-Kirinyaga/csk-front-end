@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import HowToRegIcon from "@mui/icons-material/HowToReg";
+import { LoadingButton } from "@mui/lab";
 import CustomInput from "./CustomInput";
 import techStackOptions from "./TechStackOptions";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +9,6 @@ import { toastStyles } from "../../toastConfig";
 import "react-toastify/dist/ReactToastify.css";
 import {
   Typography,
-  Button,
   Paper,
   Box,
   FormControl,
@@ -40,6 +41,8 @@ function SignupForm() {
     confirmPassword: "",
   });
   const [passwordMatch, setPasswordMatch] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+  const [buttonText, setButtonText] = useState("Register");
 
   const handleTechStackChange = (e) => {
     const { value } = e.target;
@@ -71,16 +74,22 @@ function SignupForm() {
     } else {
       setPasswordMatch(true);
     }
+    setIsLoading(true);
+    setButtonText("Please Wait");
 
     // post request to API
     Axios.post(`${apiDomain}/users`, formData)
       .then((response) => {
-        console.log(response);
+        // console.log(response);
+        setIsLoading(false);
+        setButtonText("Register");
         toast.success("Account created successfully");
         navigate("/login");
       })
       .catch(({ response }) => {
         console.log(response);
+        setIsLoading(false);
+        setButtonText("Register");
         toast.error(response.data.message, toastStyles.error);
         toast.error(response.data.error, toastStyles.error);
       });
@@ -91,7 +100,17 @@ function SignupForm() {
       <Typography variant="h4" gutterBottom className={classes.registerTitle}>
         Register
       </Typography>
-      <Paper elevation={3} square={false} className={classes.paper}>
+      <Paper
+        elevation={3}
+        square={false}
+        className={classes.paper}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <form onSubmit={handleSubmit}>
           <CustomInput
             label="Full Name"
@@ -197,13 +216,16 @@ function SignupForm() {
               Passwords do not match.
             </Typography>
           )}
-          <Button
+          <LoadingButton
             type="submit"
-            variant="contained"
+            variant="outlined"
+            loadingPosition="start"
+            loading={isLoading}
+            startIcon={<HowToRegIcon />}
             className={classes.submitBTN}
           >
-            Sign Up
-          </Button>
+            {buttonText}
+          </LoadingButton>
           <Typography
             variant="body2"
             component="p"

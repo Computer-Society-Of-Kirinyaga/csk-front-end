@@ -6,6 +6,9 @@ import SignupPage from "./Pages/SignupPage/SignupPage";
 import LoginPage from "./Pages/LoginPage/LoginPage";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+// import Loading from "./Components/Loading/Loading";
+// import LoadingButton from "./Components/Loading/LoadingButton";
+import Mui from "./Components/Loading/Mui";
 
 const useStyles = makeStyles((theme) => ({
   color_test: {
@@ -22,6 +25,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/load" element={<Mui />} />
         </Routes>
         <ToastContainer />
       </BrowserRouter>

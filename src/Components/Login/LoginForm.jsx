@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import HowToRegIcon from "@mui/icons-material/HowToReg";
+import { LoadingButton } from "@mui/lab";
 import CustomInput from "../SignUp/CustomInput";
 import { useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
@@ -15,12 +17,18 @@ function LoginForm() {
     userName: "",
     password: "",
   });
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [buttonText, setButtonText] = useState("Login");
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
+    setButtonText("Please Wait");
     await loginUser(dispatch, formData, () => navigate("/"));
     // console.log(formData);
   };
@@ -49,13 +57,18 @@ function LoginForm() {
               required
             />
 
-            <Button
+  
+            <LoadingButton
+              style={{}}
               type="submit"
-              variant="contained"
+              variant="outlined"
+              loadingPosition="start"
+              loading={isLoading}
+              startIcon={<HowToRegIcon />}
               className={classes.submitBTN}
             >
-              Login
-            </Button>
+              {buttonText}
+            </LoadingButton>
             <Typography
               variant="body2"
               component="p"

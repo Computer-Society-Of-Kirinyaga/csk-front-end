@@ -12,7 +12,6 @@ const useStyles = makeStyles((theme) => ({
   SignupLogo: {
     maxWidth: "400px",
     height: "auto",
-  
   },
   LoginLogo: {
     maxWidth: "300px",
@@ -37,8 +36,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   submitBTN: {
-    display: "block",
-    margin: "auto",
+    display: "flex",
+    marginLeft: "auto",
+    marginRight: "auto",
     color: "secondary",
     marginTop: theme.spacing(2),
     "&:hover": {
