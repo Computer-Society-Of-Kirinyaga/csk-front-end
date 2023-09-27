@@ -20,7 +20,6 @@ function LoginForm() {
 
   const [isLoading, setIsLoading] = useState(false);
   const [buttonText, setButtonText] = useState("Login");
-
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
