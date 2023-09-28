@@ -22,7 +22,7 @@ const JoinUs = () => {
         With Chrome profiles you can separate all your Chrome stuff. Create
         profiles for friends and family, or split between work and fun.
       </Typography>
-      <Link className={classes.joinLink}>Join us</Link>
+      <Link to="/signup" className={classes.joinLink}>Join us</Link>
     </Container>
   );
 };
