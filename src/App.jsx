@@ -1,22 +1,29 @@
 import "./App.css";
-import { Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import Footer from "./Components/Footer/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./Pages/HomePage/HomePage";
+import SignupPage from "./Pages/SignupPage/SignupPage";
+import LoginPage from "./Pages/LoginPage/LoginPage";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const useStyles = makeStyles((theme) => ({
   color_test: {
     color: theme.palette.primary.main,
   },
 }));
-
 function App() {
   const classes = useStyles();
   return (
     <>
-      <Typography variant="h1" className={classes.color_test}>
-        Welcome to the csk app
-      </Typography>
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/login" element={<LoginPage />} />
+        </Routes>
+        <ToastContainer />
+      </BrowserRouter>
     </>
   );
 }
