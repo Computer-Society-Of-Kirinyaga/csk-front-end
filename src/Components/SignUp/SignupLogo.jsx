@@ -1,5 +1,5 @@
 import React from "react";
-import SignupLogo from "../../assets/images/SignupLogo.png";
+import SignupLogo from "../../assets/images/signupLogo.png";
 import { Box } from "@mui/material";
 import useStyles from "./AuthStyles";
 
