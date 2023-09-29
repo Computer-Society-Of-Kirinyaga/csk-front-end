@@ -12,7 +12,6 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
   },
 }));
-
 function App() {
   const classes = useStyles();
   return (
