@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     height: "auto",
   },
   registerTitle: {
+    marginTop: "4rem",
     textAlign: "center",
     color: theme.palette.primary.main,
     fontWeight: "bold",
@@ -24,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "20px 0",
     [theme.breakpoints.down("sm")]: {
       fontSize: "1.5rem",
+      marginTop: "3rem",
     },
   },
   paper: {

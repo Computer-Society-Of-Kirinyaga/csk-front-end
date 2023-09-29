@@ -11,7 +11,7 @@ function LoginPage() {
       <Box sx={{ paddingTop: "1rem" }}>
         <PublicAppBar />
         <Grid container spacing={1}>
-          <Grid item xs={12}  md={6} sm={6}>
+          <Grid item xs={12} md={6} sm={6}>
             <ImageLogo />
           </Grid>
 

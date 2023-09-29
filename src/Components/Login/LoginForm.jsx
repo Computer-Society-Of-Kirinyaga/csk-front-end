@@ -5,7 +5,8 @@ import CustomInput from "../SignUp/CustomInput";
 import { useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { Typography, Paper, Box } from "@mui/material";
-import useStyles from "../SignUp/AuthStyles";
+// import useStyles from "../SignUp/AuthStyles";
+import useStyles from "./LoginStyles";
 import { useDispatch } from "react-redux";
 import { loginUser } from "../../Redux/APICall";
 
@@ -35,11 +36,16 @@ function LoginForm() {
   };
   return (
     <Box>
-      <Typography variant="h4" gutterBottom className={classes.registerTitle}>
+      <Typography variant="h4" gutterBottom className={classes.loginTitle}>
         Login
       </Typography>
       <Box>
-        <Paper elevation={3} square={false} className={classes.paper}>
+        <Paper
+          elevation={3}
+          square={false}
+          className={classes.paper}
+         
+        >
           <form onSubmit={handleSubmit}>
             <CustomInput
               label="User Name"
@@ -59,11 +65,11 @@ function LoginForm() {
             />
 
             <LoadingButton
-             sx={{
-              display: "flex",
-              marginLeft: "auto",
-              marginRight: "auto",
-            }}
+              sx={{
+                display: "flex",
+                marginLeft: "auto",
+                marginRight: "auto",
+              }}
               type="submit"
               variant="outlined"
               loadingPosition="start"
