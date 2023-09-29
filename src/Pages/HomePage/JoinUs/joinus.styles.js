@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    marginBottom: theme.spacing(1)
   },
   textElement: {
     color: theme.palette.common.white,

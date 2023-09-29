@@ -174,6 +174,7 @@ function SignupForm() {
               "Computer Science",
               "IT",
               "Maths Science",
+              "Other"
             ]}
             required
           />

@@ -4,6 +4,7 @@ import UpcomingEvents from "./UpcomingEvents/UpcomingEvents";
 import DailyChallengeAndWeeklyLeaderBoard from "./DailyChallengeAndWeeklyLeaderBoard/DailyChallengeAndWeeklyLeaderBoard";
 import Benefits from "./Benefits/Benefits";
 import JoinUs from "./JoinUs/JoinUs";
+import Footer from '../../Components/Footer/Footer'
 const HomePage = () => {
   return (
     <>
@@ -13,6 +14,7 @@ const HomePage = () => {
       <DailyChallengeAndWeeklyLeaderBoard />
       <Benefits />
       <JoinUs />
+      <Footer />
     </>
   );
 };
