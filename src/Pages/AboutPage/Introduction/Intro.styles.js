@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(5, 8),
     margin: theme.spacing(0, "auto"),
     [theme.breakpoints.down("md")]: {
-      padding: theme.spacing(3, 0),
+      padding: theme.spacing(4, 0),
     },
   },
   mainTitle: {
