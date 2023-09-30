@@ -14,7 +14,7 @@ function GDSC() {
       columnSpacing={7}
     >
       <Typography className={classes.mlsaTitle}>
-        Google Developer Student ClubS GDSC
+        Google Developer Student ClubS. (GDSC)
       </Typography>
       <Grid component="section" className={classes.parentCover}>
         <Typography className={classes.aboutmlsa}>
@@ -30,7 +30,7 @@ function GDSC() {
           technologies, and to build solutions for local businesses and their
           community.
           <br />
-          Visit the Google Developer Student Clubs website
+          Visit the Google Developer Student Clubs website:
           <a href="https://developers.google.com/community/dsc" target="_blank">
             <hr /> Visit our Website
           </a>

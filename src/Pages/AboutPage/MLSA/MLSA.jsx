@@ -14,11 +14,11 @@ function MLSA() {
       columnSpacing={7}
     >
       <Typography className={classes.mlsaTitle}>
-        The Microsoft Learn Student Ambassadors (MLSA)
+        Microsoft Learn Student Ambassadors. (MLSA)
       </Typography>
       <Grid component="section" className={classes.parentCover}>
         <Typography className={classes.aboutmlsa}>
-          The Microsoft learn student ambassador program is a global group of
+          Microsoft learn student ambassador program is a global group of
           on-campus ambassadors who are eager to help students and their
           communities, lead in their local tech circles and develop technical
           and career skills for the future.
@@ -30,7 +30,7 @@ function MLSA() {
           We are dedicated to empowering students to achieve more through
           technical and career development.
           <br />
-          Visit the Microsoft Learn Student Ambassadors website
+          Visit the Microsoft Learn Student Ambassadors website:
           <a href="https://studentambassadors.microsoft.com/" target="_blank">
             <hr /> Visit our Website
           </a>
