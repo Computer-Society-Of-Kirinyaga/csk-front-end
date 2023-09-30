@@ -17,12 +17,12 @@ const PublicAppBar = () => {
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
   const navItems = [
     { label: "home", to: "/" },
-    { label: "about us", to: "/" },
+    { label: "about us", to: "/about" },
     { label: "events", to: "/" },
     { label: "gallery", to: "/" },
     { label: "blog", to: "/" },
     { label: "contact us", to: "/" },
-    { label:  "sign-up", to: "/signup"}
+    { label: "sign-up", to: "/signup" },
   ];
   return (
     <AppBar elevation={1}>
