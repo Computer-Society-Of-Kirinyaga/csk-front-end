@@ -14,7 +14,7 @@ function GDSC() {
       columnSpacing={7}
     >
       <Typography className={classes.mlsaTitle}>
-        Google Developer Student ClubS. (GDSC)
+        Google Developer Student Clubs. (GDSC)
       </Typography>
       <Grid component="section" className={classes.parentCover}>
         <Typography className={classes.aboutmlsa}>
