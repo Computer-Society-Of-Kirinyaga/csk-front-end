@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import HowToRegIcon from "@mui/icons-material/HowToReg";
 import { LoadingButton } from "@mui/lab";
 import CustomInput from "../SignUp/CustomInput";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { Typography, Paper, Box } from "@mui/material";
 // import useStyles from "../SignUp/AuthStyles";
@@ -85,7 +85,7 @@ function LoginForm() {
               gutterBottom
               className={classes.dontHavAccount}
             >
-              Don't have an account? <a href="/signup">Signup</a>
+              Don't have an account? <Link to="/signup">Signup</Link>
             </Typography>
           </form>
         </Paper>

@@ -3,7 +3,7 @@ import HowToRegIcon from "@mui/icons-material/HowToReg";
 import { LoadingButton } from "@mui/lab";
 import CustomInput from "./CustomInput";
 import techStackOptions from "./TechStackOptions";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { toastStyles } from "../../toastConfig";
 import "react-toastify/dist/ReactToastify.css";
@@ -174,7 +174,7 @@ function SignupForm() {
               "Computer Science",
               "IT",
               "Maths Science",
-              "Other"
+              "Other",
             ]}
             required
           />
@@ -245,7 +245,7 @@ function SignupForm() {
             gutterBottom
             className={classes.HaveAccount}
           >
-            Have an account? <a href="/login">Login</a>
+            Have an account? <Link to="/login">Login</Link>
           </Typography>
         </form>
       </Paper>
