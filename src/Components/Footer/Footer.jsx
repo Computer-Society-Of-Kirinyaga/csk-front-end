@@ -11,7 +11,7 @@ const Footer = () => {
   const classes = useStyles();
 
   return (
-    <footer className={classes.footer}>
+    <footer className={classes.footer} >
       <Container>
         <Grid
           container
